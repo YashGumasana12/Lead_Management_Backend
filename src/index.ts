@@ -19,7 +19,7 @@ app.use(morgan('dev')); // Logging
 app.use(express.json()); // Parse JSON bodies
 
 // Health check endpoint
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json({ 
     status: 'ok',
     message: 'Server is running',
