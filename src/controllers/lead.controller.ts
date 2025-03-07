@@ -3,7 +3,7 @@ import { Lead } from '../models/lead.model';
 
 export const leadController = {
   // Get all leads
-  getAllLeads: async (req: Request, res: Response): Promise<Response> => {
+  getAllLeads: async (_req: Request, res: Response): Promise<Response> => {
     try {
       const leads = await Lead.find().sort({ createdAt: -1 });
       return res.json(leads);
